@@ -1,0 +1,13 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Username</nz-form-label>
+    <nz-form-control [nzSpan]="6" nzHasFeedback nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl">
+      <input nz-input formControlName="userName" placeholder="async validate try to write JasonWood" />
+      <ng-template #userErrorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')">Please input your username!</ng-container>
+        <ng-container *ngIf="control.hasError('duplicated')">The username is redundant!</ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+</form>
