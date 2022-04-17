@@ -1,3 +1,4 @@
+import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { AddShirtComponent } from './add-shirt/add-shirt.component';
 import { ListShirtsComponent } from './list-shirts/list-shirts.component';
@@ -22,6 +23,7 @@ registerLocaleData(en);
     ListShirtsComponent,
     AddShirtComponent,
     TestComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
